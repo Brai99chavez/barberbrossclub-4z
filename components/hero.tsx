@@ -20,23 +20,23 @@ export function Hero() {
           Bross Barber Club
         </p>
         
-        <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-wide mb-6">
+        <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-wide mb-6 animate-fade-in-up">
           <span className="text-foreground">BARBER</span>
           <span className="text-primary">BROSS</span>
         </h1>
         
-        <h2 className="font-heading text-xl sm:text-2xl md:text-3xl text-foreground mb-4 tracking-wide">
+        <h2 className="font-heading text-xl sm:text-2xl md:text-3xl text-foreground mb-4 tracking-wide animate-fade-in-delay">
           RESERVÁ TU TURNO EN SEGUNDOS
         </h2>
         
-        <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-lg mx-auto">
+        <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-lg mx-auto animate-fade-in-delay">
           Elegí tu sucursal y agendá en menos de 1 minuto
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-delay-2">
           <a
             href="#sucursales"
-            className="group inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20"
           >
             <span>Reservar turno</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -44,7 +44,7 @@ export function Hero() {
           
           <a
             href="#servicios"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-foreground/30 text-foreground font-medium rounded-full hover:bg-foreground/10 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-foreground/20 text-foreground font-semibold rounded-full hover:bg-foreground/5 hover:border-foreground/40 transition-all duration-300"
           >
             Ver servicios
           </a>

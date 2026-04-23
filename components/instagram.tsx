@@ -32,21 +32,21 @@ export function Instagram() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-12">
           {images.map((image, index) => (
             <a
               key={index}
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-square overflow-hidden rounded-lg"
+              className="group relative aspect-square overflow-hidden rounded-xl"
             >
               <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                 style={{ backgroundImage: `url(${image})` }}
               />
-              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-colors duration-300 flex items-center justify-center">
-                <InstagramIcon className="w-8 h-8 text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/50 transition-all duration-300 flex items-center justify-center">
+                <InstagramIcon className="w-8 h-8 text-foreground opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
               </div>
             </a>
           ))}
@@ -57,7 +57,7 @@ export function Instagram() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-foreground text-background font-medium rounded-full hover:bg-foreground/90 transition-all duration-300"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background font-semibold rounded-full hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
           >
             <InstagramIcon className="w-5 h-5" />
             <span>Ver en Instagram</span>

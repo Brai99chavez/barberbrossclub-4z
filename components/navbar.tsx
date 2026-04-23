@@ -33,7 +33,7 @@ export function Navbar() {
           
           <a
             href="#sucursales"
-            className="group inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 bg-primary text-primary-foreground font-medium text-sm rounded-full hover:bg-primary/90 transition-all duration-300"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3 bg-primary text-primary-foreground font-semibold text-sm rounded-full hover:bg-primary/90 transition-all duration-300 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30"
           >
             <span>Reservar turno</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
