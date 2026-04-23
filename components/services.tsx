@@ -37,20 +37,21 @@ export function Services() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <div
               key={service.title}
-              className="group p-6 md:p-8 bg-card rounded-2xl border border-border hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/5"
+              className="group p-6 md:p-8 bg-card rounded-2xl border border-border hover:border-primary/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors duration-300">
+              <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                 <service.icon className="w-7 h-7 text-primary" />
               </div>
               
-              <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2">
+              <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                 {service.title}
               </h3>
               
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>
