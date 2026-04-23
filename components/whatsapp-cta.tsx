@@ -1,6 +1,6 @@
 import { MessageCircle } from 'lucide-react'
 
-const WHATSAPP_URL = '#'
+const WHATSAPP_URL = 'https://wa.me/5492216401362'
 
 export function WhatsAppCTA() {
   return (

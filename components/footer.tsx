@@ -41,9 +41,16 @@ export function Footer() {
                 <MapPin className="w-4 h-4 text-muted-foreground/50" />
                 <span>25 y 526, La Plata</span>
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground text-sm">
-                <Phone className="w-4 h-4 text-muted-foreground/50" />
-                <span>WhatsApp</span>
+              <li>
+                <a 
+                  href="https://wa.me/5492216401362"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground text-sm hover:text-primary transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-muted-foreground/50" />
+                  <span>WhatsApp</span>
+                </a>
               </li>
             </ul>
           </div>
