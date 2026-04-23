@@ -3,8 +3,6 @@
 import { useState, useEffect } from 'react'
 import { ArrowRight } from 'lucide-react'
 
-const FRESHA_URL = 'https://www.fresha.com/es/a/bross-barber-club-av-25-362-tolosa-avenida-25-632-oynej2qu?pId=2726774'
-
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
@@ -34,9 +32,7 @@ export function Navbar() {
           </a>
           
           <a
-            href={FRESHA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#sucursales"
             className="group inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 bg-primary text-primary-foreground font-medium text-sm rounded-full hover:bg-primary/90 transition-all duration-300"
           >
             <span>Reservar turno</span>

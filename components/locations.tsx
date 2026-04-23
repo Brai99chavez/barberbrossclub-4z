@@ -1,19 +1,19 @@
 import { MapPin, ArrowRight } from 'lucide-react'
 
-const FRESHA_URL = 'https://www.fresha.com/es/a/bross-barber-club-av-25-362-tolosa-avenida-25-632-oynej2qu?pId=2726774'
-
 const locations = [
   {
     address: '19 Y 523',
     city: 'La Plata',
     description: 'Atención profesional en un ambiente moderno',
     image: '/images/location-1.jpg',
+    freshaUrl: 'https://www.fresha.com/es/a/bross-barber-club-av-19-tolosa-avenida-19-872-n8t8c849?pId=2726774',
   },
   {
     address: '25 Y 526',
     city: 'La Plata',
     description: 'Tu estilo, nuestra prioridad',
     image: '/images/location-2.jpg',
+    freshaUrl: 'https://www.fresha.com/es/a/bross-barber-club-av-25-362-tolosa-avenida-25-632-oynej2qu?pId=2726774',
   },
 ]
 
@@ -62,7 +62,7 @@ export function Locations() {
                 </p>
                 
                 <a
-                  href={FRESHA_URL}
+                  href={location.freshaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group/btn w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-all duration-300"

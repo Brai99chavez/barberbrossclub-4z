@@ -1,7 +1,5 @@
 import { ArrowRight } from 'lucide-react'
 
-const FRESHA_URL = 'https://www.fresha.com/es/a/bross-barber-club-av-25-362-tolosa-avenida-25-632-oynej2qu?pId=2726774'
-
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -37,9 +35,7 @@ export function Hero() {
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href={FRESHA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#sucursales"
             className="group inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-105"
           >
             <span>Reservar turno</span>
