@@ -4,22 +4,22 @@ const services = [
   {
     icon: Scissors,
     title: 'CORTE',
-    description: 'Estilo y precisión',
-  },
-  {
-    icon: User,
-    title: 'BARBA',
     description: 'Diseño y perfilado',
   },
   {
-    icon: Users,
+    icon: User,
     title: 'CORTE + BARBA',
     description: 'El combo completo',
   },
   {
+    icon: Users,
+    title: 'RULOS',
+    description: 'Look renovado',
+  },
+  {
     icon: Palette,
     title: 'COLOR',
-    description: 'Look renovado',
+    description: 'Cambio de tono',
   },
 ]
 
