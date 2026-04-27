@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bross Barber Club | Barbería en La Plata</title>
   <meta name="description" content="Reservá tu turno en Bross Barber Club. Barbería moderna en La Plata. Cortes, barba y más.">
-  <meta name="theme-color" content="#D4A84B">
+  <meta name="theme-color" content="#FF6B35">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/Favicon.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/images/Favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/Favicon.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/Favicon.png">
+  <link rel="manifest" href="manifest.json">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +24,7 @@
             foreground: '#FAFAFA',
             card: '#141414',
             border: '#262626',
-            primary: '#D4A84B',
+            primary: '#FF6B35',
             'primary-foreground': '#0A0A0A',
             secondary: '#1A1A1A',
             muted: '#171717',
@@ -226,7 +231,7 @@
         </div>
 
         <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-heading font-medium text-base rounded-lg hover:bg-primary hover:shadow-lg hover:shadow-primary/60 hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300">
+        <button id="mobile-menu-btn" class="md:hidden flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-heading font-medium text-base rounded-lg hover:bg-primary hover:shadow-lg hover:shadow-primary/60 hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300 mr-6">
           <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           <span id="menu-text">Menú</span>
@@ -252,7 +257,7 @@
   <!-- Hero Section -->
   <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="assets/images/hero-bg.jpg" alt="Bross Barber Club" class="w-full h-full object-cover object-center">
+      <img src="assets/images/hero-bg.png" alt="Bross Barber Club" class="w-full h-full object-cover object-center">
       <div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/50"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
     </div>
@@ -340,7 +345,7 @@
         <!-- Location 1 -->
         <div class="group relative bg-card rounded-2xl overflow-hidden border border-border hover:shadow-2xl hover:shadow-primary/30 hover:border-primary transition-all duration-300 premium-hover scroll-animate-left stagger-1">
           <div class="relative h-56 sm:h-64 lg:h-72 overflow-hidden">
-            <img src="assets/images/location-1.jpg" alt="Sucursal Av 19 872" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <img src="assets/images/location-1.png" alt="Sucursal Av 19 872" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
             <div class="absolute bottom-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 bg-background/80 backdrop-blur-sm rounded-full text-sm">
               <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -359,7 +364,7 @@
         <!-- Location 2 -->
         <div class="group relative bg-card rounded-2xl overflow-hidden border border-border hover:shadow-2xl hover:shadow-primary/30 hover:border-primary transition-all duration-300 premium-hover scroll-animate-right stagger-2">
           <div class="relative h-56 sm:h-64 lg:h-72 overflow-hidden">
-            <img src="assets/images/location-2.jpg" alt="Sucursal Av 25 632" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <img src="assets/images/location-2.png" alt="Sucursal Av 25 632" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
             <div class="absolute bottom-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 bg-background/80 backdrop-blur-sm rounded-full text-sm">
               <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
