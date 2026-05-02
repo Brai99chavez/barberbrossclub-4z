@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es" class="bg-[#0A0A0A]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos | Bross Barber Club</title>
+  <meta name="description" content="Cursos de barbería en Bross Barber Club. Formate como barbero profesional.">
+  <meta name="theme-color" content="#ffb460">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/Favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#0A0A0A',
+            foreground: '#FAFAFA',
+            card: '#141414',
+            border: '#262626',
+            primary: '#ffb460',
+            'primary-foreground': '#0A0A0A',
+            secondary: '#1A1A1A',
+            muted: '#171717',
+            'muted-foreground': '#A3A3A3',
+          },
+          fontFamily: {
+            heading: ['Bebas Neue', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Bebas Neue', sans-serif; }
+    .nav-link.active { color: #ffb460 !important; }
+    .reveal { opacity: 0; transform: translateY(28px); filter: blur(6px); transition: opacity 0.75s ease, transform 0.75s ease, filter 0.75s ease; will-change: opacity, transform, filter; }
+    .reveal.visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; filter: none; transition: none; } }
+    @media (max-width: 767px) {
+      #navbar {
+        background-color: rgba(10, 10, 10, 0.95) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        overflow-x: hidden;
+      }
+      #mobile-menu-btn {
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-background text-foreground">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-[68px] sm:h-[84px]">
+        <a href="index.html" class="flex items-center">
+          <span class="text-xl sm:text-2xl font-heading tracking-wider">
+            <span class="text-foreground">BARBER</span>
+            <span class="text-primary">BROSS</span>
+          </span>
+        </a>
+        <div class="hidden md:flex items-center gap-5 lg:gap-8 xl:gap-10">
+          <a href="index.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide">Inicio</a>
+          <a href="servicios.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide">Servicios</a>
+          <a href="cursos.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide active">Cursos</a>
+          <a href="sucursales.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide">Sucursales</a>
+          <a href="gallery.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide">Galería</a>
+          <a href="contacto.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide">Contacto</a>
+          <a href="sucursales.html" class="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 bg-primary text-primary-foreground font-heading font-medium text-base rounded-lg hover:bg-primary hover:shadow-lg hover:shadow-primary/60 hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300">
+            Reservar turno
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-heading font-medium text-base rounded-lg hover:bg-primary hover:shadow-lg hover:shadow-primary/60 hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300 mr-6">
+          <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          <span id="menu-text">Menú</span>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide py-2">Inicio</a>
+          <a href="servicios.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide py-2">Servicios</a>
+          <a href="cursos.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide py-2 active">Cursos</a>
+          <a href="sucursales.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide py-2">Sucursales</a>
+          <a href="gallery.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide py-2">Galería</a>
+          <a href="contacto.html" class="nav-link text-foreground hover:text-primary transition-colors duration-300 font-heading font-medium tracking-wide py-2">Contacto</a>
+          <a href="sucursales.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-heading font-medium text-base rounded-lg hover:bg-primary hover:shadow-lg hover:shadow-primary/60 hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300">
+            Reservar turno
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="courses" class="py-20 sm:py-28 lg:py-32 bg-background pt-[100px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 sm:mb-16">
+        <p class="text-primary tracking-[0.3em] text-sm mb-4">CURSOS</p>
+        <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl tracking-tight mb-4">FORMATE COMO BARBERO PROFESIONAL</h1>
+        <p class="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto">Aprendé desde cero o perfeccioná tu técnica con nuestros instructores.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div class="group relative flex flex-col p-6 sm:p-8 rounded-2xl border bg-card border-border transition-all duration-500 ease-out hover:bg-primary hover:border-primary cursor-pointer">
+          <div class="absolute top-4 right-4">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-sans font-medium bg-primary/20 text-primary group-hover:bg-black/20 group-hover:text-primary-foreground transition-colors duration-500">Nuevo</span>
+          </div>
+          <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl mb-6 bg-secondary transition-colors duration-500 ease-out group-hover:bg-black/20">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary transition-colors duration-500 ease-out group-hover:text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 class="font-heading text-xl sm:text-2xl tracking-wide mb-2 pr-16 text-foreground transition-colors duration-500 ease-out group-hover:text-primary-foreground">CURSO INICIAL DE BARBERÍA</h3>
+          <p class="text-sm sm:text-base text-muted-foreground transition-colors duration-500 ease-out group-hover:text-primary-foreground/80 mb-5 flex-grow">Comenzá tu camino en el mundo de la barbería. Aprendé cortes básicos, perfilado y manejo de herramientas profesionales.</p>
+          <div class="flex flex-col gap-2 mb-6">
+            <div class="flex items-center gap-2 text-sm">
+              <svg class="w-4 h-4 text-primary transition-colors duration-500 group-hover:text-primary-foreground flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="text-muted-foreground transition-colors duration-500 group-hover:text-primary-foreground/80">Duración: <strong class="text-foreground transition-colors duration-500 group-hover:text-primary-foreground">2 meses</strong></span>
+            </div>
+            <p class="font-heading text-2xl text-primary transition-colors duration-500 group-hover:text-primary-foreground mt-1">$120.000</p>
+          </div>
+          <a href="https://wa.me/5492216401362?text=Hola%20buenas%20tardes%2C%20estoy%20interesado%20en%20el%20curso%20Curso%20Inicial%20de%20Barber%C3%ADa%2C%20me%20gustaria%20saber%20mas%20detalles%20para%20inscribirme" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-secondary text-foreground font-medium rounded-lg border border-border group-hover:bg-black/20 group-hover:border-transparent group-hover:text-primary-foreground transition-all duration-500 mt-auto">
+            Consultar por WhatsApp
+          </a>
+        </div>
+        <div class="group relative flex flex-col p-6 sm:p-8 rounded-2xl border bg-card border-border transition-all duration-500 ease-out hover:bg-primary hover:border-primary cursor-pointer">
+          <div class="absolute top-4 right-4">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-sans font-medium bg-primary/20 text-primary group-hover:bg-black/20 group-hover:text-primary-foreground transition-colors duration-500">Popular</span>
+          </div>
+          <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl mb-6 bg-secondary transition-colors duration-500 ease-out group-hover:bg-black/20">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary transition-colors duration-500 ease-out group-hover:text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl sm:text-2xl tracking-wide mb-2 pr-16 text-foreground transition-colors duration-500 ease-out group-hover:text-primary-foreground">CURSO AVANZADO FADE & TÉCNICAS MODERNAS</h3>
+          <p class="text-sm sm:text-base text-muted-foreground transition-colors duration-500 ease-out group-hover:text-primary-foreground/80 mb-5 flex-grow">Dominá el fade perfecto y las técnicas más demandadas del mercado actual. Ideal para quienes ya tienen base.</p>
+          <div class="flex flex-col gap-2 mb-6">
+            <div class="flex items-center gap-2 text-sm">
+              <svg class="w-4 h-4 text-primary transition-colors duration-500 group-hover:text-primary-foreground flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="text-muted-foreground transition-colors duration-500 group-hover:text-primary-foreground/80">Duración: <strong class="text-foreground transition-colors duration-500 group-hover:text-primary-foreground">1 mes</strong></span>
+            </div>
+            <p class="font-heading text-2xl text-primary transition-colors duration-500 group-hover:text-primary-foreground mt-1">$90.000</p>
+          </div>
+          <a href="https://wa.me/5492216401362?text=Hola%20buenas%20tardes%2C%20estoy%20interesado%20en%20el%20curso%20Curso%20Avanzado%20Fade%20%26%20T%C3%A9cnicas%20Modernas%2C%20me%20gustaria%20saber%20mas%20detalles%20para%20inscribirme" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-secondary text-foreground font-medium rounded-lg border border-border group-hover:bg-black/20 group-hover:border-transparent group-hover:text-primary-foreground transition-all duration-500 mt-auto">
+            Consultar por WhatsApp
+          </a>
+        </div>
+        <div class="group relative flex flex-col p-6 sm:p-8 rounded-2xl border bg-card border-border transition-all duration-500 ease-out hover:bg-primary hover:border-primary cursor-pointer">
+          <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl mb-6 bg-secondary transition-colors duration-500 ease-out group-hover:bg-black/20">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary transition-colors duration-500 ease-out group-hover:text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl sm:text-2xl tracking-wide mb-2 text-foreground transition-colors duration-500 ease-out group-hover:text-primary-foreground">CURSO PROFESIONAL COMPLETO</h3>
+          <p class="text-sm sm:text-base text-muted-foreground transition-colors duration-500 ease-out group-hover:text-primary-foreground/80 mb-5 flex-grow">El programa más completo: cortes, barba, coloración, ondulación y gestión de tu propio negocio de barbería.</p>
+          <div class="flex flex-col gap-2 mb-6">
+            <div class="flex items-center gap-2 text-sm">
+              <svg class="w-4 h-4 text-primary transition-colors duration-500 group-hover:text-primary-foreground flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="text-muted-foreground transition-colors duration-500 group-hover:text-primary-foreground/80">Duración: <strong class="text-foreground transition-colors duration-500 group-hover:text-primary-foreground">3 meses</strong></span>
+            </div>
+            <p class="font-heading text-2xl text-primary transition-colors duration-500 group-hover:text-primary-foreground mt-1">$200.000</p>
+          </div>
+          <a href="https://wa.me/5492216401362?text=Hola%20buenas%20tardes%2C%20estoy%20interesado%20en%20el%20curso%20Curso%20Profesional%20Completo%2C%20me%20gustaria%20saber%20mas%20detalles%20para%20inscribirme" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-secondary text-foreground font-medium rounded-lg border border-border group-hover:bg-black/20 group-hover:border-transparent group-hover:text-primary-foreground transition-all duration-500 mt-auto">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-border bg-background">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+        <div>
+          <a href="index.html" class="inline-block mb-4">
+            <span class="text-2xl font-heading tracking-wider">
+              <span class="text-foreground">BARBER</span>
+              <span class="text-primary">BROSS</span>
+            </span>
+          </a>
+          <p class="text-muted-foreground text-sm leading-relaxed mb-6">Barbería moderna. Estilo urbano. Reservá online en segundos.</p>
+          <a href="https://www.instagram.com/brossbarberclub/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg>
+            <span class="text-sm">@brossbarberclub</span>
+          </a>
+        </div>
+        <div>
+          <h3 class="font-heading text-lg tracking-wider text-primary mb-6">Locacion y Contacto</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3"><span class="text-muted-foreground text-sm">Av. 19 872, B1901EFP Tolosa, Provincia de Buenos Aires</span></li>
+            <li class="flex items-start gap-3"><span class="text-muted-foreground text-sm">Av. 25 632, B1906 Tolosa, Provincia de Buenos Aires</span></li>
+            <li><a href="https://wa.me/5492216401362" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors"><span class="text-sm">WhatsApp</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-heading text-lg tracking-wider text-primary mb-6">HORARIOS</h3>
+          <ul class="space-y-4">
+            <li class="flex items-center justify-between gap-4"><span class="text-muted-foreground text-sm">Lun - sab</span><span class="text-foreground text-sm font-medium">10:00 — 20:00</span></li>
+            <li class="flex items-center justify-between gap-4"><span class="text-muted-foreground text-sm">Domingos</span><span class="text-muted-foreground text-sm">Cerrado</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-border text-center">
+        <p class="text-muted-foreground text-sm">© 2026 BarberBross. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-link').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPage || (currentPage === '' && href === 'index.html')) link.classList.add('active'); else link.classList.remove('active');
+    });
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const menuText = document.getElementById('menu-text');
+      if (mobileMenu.classList.contains('hidden')) {
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        menuText.textContent = 'Menú';
+      } else {
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        menuText.textContent = 'Cerrar';
+      }
+    });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-[#0A0A0A]/95', 'backdrop-blur-md');
+        navbar.classList.remove('bg-transparent');
+      } else {
+        navbar.classList.remove('bg-[#0A0A0A]/95', 'backdrop-blur-md');
+        navbar.classList.add('bg-transparent');
+      }
+    });
+    const revealSelectors = ['section > div', 'section .grid > *', 'section article', 'footer .grid > div', 'footer .border-t'];
+    const revealElements = document.querySelectorAll(revealSelectors.join(','));
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealElements.forEach(element => {
+      element.classList.add('reveal');
+      revealObserver.observe(element);
+    });
+  </script>
+</body>
+</html>
