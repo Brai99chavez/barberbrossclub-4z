@@ -26,6 +26,16 @@
       #navbar { background-color: rgba(10, 10, 10, 0.95) !important; backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; overflow-x: hidden; }
       #mobile-menu-btn { margin-right: 0; }
     }
+    .card-media::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: #141414;
+      z-index: 10;
+    }
   </style>
 </head>
 <body class="min-h-screen bg-background text-foreground">
@@ -77,9 +87,9 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         <article class="group relative overflow-hidden rounded-3xl border border-border bg-card hover:border-primary hover:shadow-2xl hover:shadow-primary/25 transition-all duration-300">
-          <div class="relative h-72 sm:h-80 overflow-hidden">
+          <div class="card-media relative h-72 sm:h-80 overflow-hidden">
             <img src="assets/images/location-1.png" alt="Sucursal Av 19 872" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+            <div class="absolute top-0 left-0 right-0 -bottom-2 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
             <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-background/80 backdrop-blur-md px-4 py-2 text-sm text-foreground border border-border">
               <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               La Plata
@@ -109,9 +119,9 @@
         </article>
 
         <article class="group relative overflow-hidden rounded-3xl border border-border bg-card hover:border-primary hover:shadow-2xl hover:shadow-primary/25 transition-all duration-300">
-          <div class="relative h-72 sm:h-80 overflow-hidden">
-            <img src="assets/images/location-2.png" alt="Sucursal Av 25 632" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+          <div class="card-media relative h-72 sm:h-80 overflow-hidden">
+            <video src="assets/videos/sucursal-2.mp4" autoplay muted loop playsinline class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"></video>
+            <div class="absolute top-0 left-0 right-0 -bottom-2 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
             <div class="absolute top-5 left-5 inline-flex items-center gap-2 rounded-full bg-background/80 backdrop-blur-md px-4 py-2 text-sm text-foreground border border-border">
               <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               La Plata
@@ -175,6 +185,11 @@
     revealElements.forEach(element => {
       element.classList.add('reveal');
       revealObserver.observe(element);
+    });
+  </script>
+  <script>
+    document.querySelector('video[src*="sucursal"]').addEventListener('loadedmetadata', function() {
+      this.playbackRate = 2;
     });
   </script>
 </body>
